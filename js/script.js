@@ -10,10 +10,10 @@ document.getElementById ("km") .innerHTML = (km + " km");
 document.getElementById ("eta") .innerHTML = (eta);
 
 if (eta < 18) {
-    sale = ((priceKm / 100 * 20).toFixed(2));
+    sale = (priceKm - (priceKm / 100 * 20).toFixed(2));
     document.getElementById ("sale") .innerHTML = ("Sei under 18, il prezzo del biglietto è stato scontato del 20%, il totale del biglietto è " + sale);
 } else if (eta > 65) {
-    sale = ((priceKm / 100 * 40).toFixed(2));
+    sale = (priceKm - (priceKm / 100 * 40).toFixed(2));
     console.log(sale);
     document.getElementById ("sale") .innerHTML = ("Sei over 65, il prezzo del biglietto è stato scontato del 40%, il totale del biglietto è  " + sale);
 }
